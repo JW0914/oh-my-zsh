@@ -115,7 +115,7 @@
 
 # Oh-My-ZSH #
 #-----------------------------------------------------------
-if [ -e /root/.oh-my-zsh ]; then
+if [ -e $HOME/.oh-my-zsh ]; then
   # Theme:
     if [ -e $ZSHcustom ]; then
       ZSH_CUSTOM="$ZSHcustom"
