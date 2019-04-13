@@ -23,7 +23,7 @@ fi
 printf "${BLUE}%s${NORMAL}\n" "Updating Oh My Zsh"
 cd "$ZSH"
 if git pull --rebase --stat origin master; then
-  cd "$ZSH/custom/zsh-autosuggestions"
+  cd "$ZSH/custom/plugins/zsh-autosuggestions"
     if [ ! -e $ZSH/custom/plugins/zsh-autosuggestions/.git ]; then
       git init
       git remote add origin https://github.com/zsh-users/zsh-autosuggestions
@@ -34,7 +34,7 @@ if git pull --rebase --stat origin master; then
       git pull --rebase --stat origin master
     fi
 
-  cd "$ZSH/custom/zsh-syntax-highlighting"
+  cd "$ZSH/custom/plugins/zsh-syntax-highlighting"
     if [ ! -e $ZSH/custom/plugins/zsh-syntax-highlighting/.git ]; then
       git init
       git remote add origin https://github.com/zsh-users/zsh-syntax-highlighting
