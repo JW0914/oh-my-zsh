@@ -71,12 +71,15 @@ main() {
     mv ~/.zshrc ~/.zshrc.pre-oh-my-zsh;
   fi
 
+  #printf "${BLUE}Using the Oh My Zsh template file and adding it to ~/.zshrc${NORMAL}\n"
+  #cp "$ZSH"/templates/zshrc.zsh-template ~/.zshrc
+  #sed "/^export ZSH=/ c\\
+  #export ZSH=\"$ZSH\"
+  #" ~/.zshrc > ~/.zshrc-omztemp
+  #mv -f ~/.zshrc-omztemp ~/.zshrc
+
   printf "${BLUE}Using the Oh My Zsh template file and adding it to ~/.zshrc${NORMAL}\n"
-  cp "$ZSH"/templates/zshrc.zsh-template ~/.zshrc
-  sed "/^export ZSH=/ c\\
-  export ZSH=\"$ZSH\"
-  " ~/.zshrc > ~/.zshrc-omztemp
-  mv -f ~/.zshrc-omztemp ~/.zshrc
+  cp "$ZSH"/.zshrc ~/.zshrc
 
   # If this user's login shell is not already "zsh", attempt to switch.
   TEST_CURRENT_SHELL=$(basename "$SHELL")
